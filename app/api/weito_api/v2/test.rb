@@ -1,8 +1,8 @@
 class WeitoAPI::V2::Test < Grape::API
-
-	desc "test api"
-	get "test" do
-		{a: 2}
+	resource :tests do
+		desc "test v2 api"
+		get "test" do
+			{message: 'Hello v2 here'}
+		end
 	end
-
 end

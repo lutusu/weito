@@ -1,9 +1,5 @@
 source 'https://gems.ruby-china.org/'
 
-# 
-
-
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use postgresql as the database for Active Record
@@ -31,20 +27,35 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'activerecord-import'
+
+
 gem 'grape'
 gem 'grape-swagger-rails'
 gem 'grape-swagger-entity'
 gem 'grape-swagger-representable'
+gem 'grape_logging'
 gem 'grape-raketasks'
+gem 'rack-cors', :require => 'rack/cors'
 
 gem 'webpacker', '~> 3.0'
 
+gem 'faraday'
+
+gem "mongoid"
+
+# pagination
+gem 'kaminari'
+gem 'kaminari-mongoid'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'database_cleaner'
+  gem 'rspec-rails'
+  gem 'rspec-grape'
 end
 
 group :development do
@@ -59,6 +70,7 @@ group :development do
   gem 'pry-byebug'
   gem 'pry-stack_explorer'
   gem 'binding_of_caller'
+  gem 'solargraph'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
