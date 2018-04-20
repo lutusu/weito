@@ -40,7 +40,7 @@ gem 'rack-cors', :require => 'rack/cors'
 
 gem 'webpacker', '~> 3.0'
 
-gem 'faraday'
+gem 'faraday' #change me
 
 gem "mongoid"
 
